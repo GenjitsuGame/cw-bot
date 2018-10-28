@@ -30,7 +30,7 @@ client.on('message', async msg => {
   }
 
 
-  if (msg.content === '!!cwall' && allowedUsers.includes(msg.author.id)) {
+  if (msg.content === '!!cwall' && config.allowedUsers.includes(msg.author.id)) {
     const cwMessage = await client
       .channels
       .find(channel => channel.id === config.channelId) // cw channel
@@ -44,7 +44,7 @@ client.on('message', async msg => {
 
     const usersToDM = await Promise
       .map(
-        allowedUsers,
+        config.allowedUsers,
         async allowedUser => client.fetchUser(allowedUser)
       );
 
