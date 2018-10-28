@@ -6,4 +6,4 @@ download latest version of nodejs
 
 `npm run start` to run
 
-don't forget to add your bot token in `config/deafault.json`
+don't forget to add your bot token in `config/default.json`
